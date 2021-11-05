@@ -6,6 +6,9 @@ import flixel.FlxSubState;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import lime.app.Application;
+#if desktop
+import Discord.DiscordClient;
+#end
 
 class OutdatedSubState extends MusicBeatState
 {
@@ -14,6 +17,11 @@ class OutdatedSubState extends MusicBeatState
 	override function create()
 	{
 		super.create();
+
+		#if desktop
+		DiscordClient.changePresence("Outdated Client Stuff", null);
+		#end
+
 		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		add(bg);
 		var ver = "v" + Application.current.meta.get('version');

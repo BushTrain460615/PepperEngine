@@ -38,7 +38,7 @@ class MainMenuState extends MusicBeatState
 	{
 		#if desktop
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("In the Menus", null);
+		DiscordClient.changePresence("In the Main Menu", null);
 		#end
 
 		transIn = FlxTransitionableState.defaultTransIn;
@@ -141,9 +141,9 @@ class MainMenuState extends MusicBeatState
 				if (optionShit[curSelected] == 'donate')
 				{
 					#if linux
-					Sys.command('/usr/bin/xdg-open', ["https://www.youtube.com/channel/UCJGR8x_g-cE1KsXKR_jZXAg", "&"]);
+					Sys.command('/usr/bin/xdg-open', ["https://www.kickstarter.com/projects/funkin/friday-night-funkin-the-full-ass-game", "&"]);
 					#else
-					FlxG.openURL('https://www.youtube.com/channel/UCJGR8x_g-cE1KsXKR_jZXAg');
+					FlxG.openURL('https://www.kickstarter.com/projects/funkin/friday-night-funkin-the-full-ass-game');
 					#end
 				}
 				else

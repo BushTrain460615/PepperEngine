@@ -545,7 +545,7 @@ class Controls extends FlxActionSet
 				bindKeys(Control.LEFT, [D]);
 				bindKeys(Control.RIGHT, [K]);
 				bindKeys(Control.ACCEPT, [G, Z]);
-				bindKeys(Control.BACK, [H, X]);
+				bindKeys(Control.BACK, [BACKSPACE, ESCAPE]);
 				bindKeys(Control.PAUSE, [ONE]);
 				bindKeys(Control.RESET, [R]);
 			case Duo(false):
@@ -554,7 +554,7 @@ class Controls extends FlxActionSet
 				bindKeys(Control.LEFT, [FlxKey.LEFT]);
 				bindKeys(Control.RIGHT, [FlxKey.RIGHT]);
 				bindKeys(Control.ACCEPT, [O]);
-				bindKeys(Control.BACK, [P]);
+				bindKeys(Control.BACK, [BACKSPACE, ESCAPE]);
 				bindKeys(Control.PAUSE, [ENTER]);
 				bindKeys(Control.RESET, [BACKSPACE]);
 			case None: // nothing

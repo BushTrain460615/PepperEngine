@@ -134,6 +134,10 @@ class TitleState extends MusicBeatState
 			FlxG.sound.music.fadeIn(4, 0, 0.7);
 		}
 
+		#if desktop
+		DiscordClient.changePresence("In Title Screen", null);
+		#end
+
 		Conductor.changeBPM(102);
 		persistentUpdate = true;
 
@@ -404,8 +408,9 @@ class TitleState extends MusicBeatState
 			// credTextShit.text += '\nNight';
 			case 15:
 				addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
-
 			case 16:
+				addMoreText('Pepper-Engine'); // credTextShit.text += '\nPepper-Engine';
+			case 17:
 				skipIntro();
 		}
 	}

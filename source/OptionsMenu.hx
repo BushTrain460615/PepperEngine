@@ -58,7 +58,6 @@ class OptionsMenu extends MusicBeatState
 	{
 		super.update(elapsed);
 
-		/* 
 			if (controls.ACCEPT)
 			{
 				changeBinding();
@@ -75,7 +74,6 @@ class OptionsMenu extends MusicBeatState
 				if (controls.DOWN_P)
 					changeSelection(1);
 			}
-		 */
 	}
 
 	function waitingInput():Void
@@ -84,7 +82,6 @@ class OptionsMenu extends MusicBeatState
 		{
 			PlayerSettings.player1.controls.replaceBinding(Control.LEFT, Keys, FlxG.keys.getIsDown()[0].ID, null);
 		}
-		// PlayerSettings.player1.controls.replaceBinding(Control)
 	}
 
 	var isSettingControl:Bool = false;
@@ -112,7 +109,7 @@ class OptionsMenu extends MusicBeatState
 		if (curSelected >= grpControls.length)
 			curSelected = 0;
 
-		// selector.y = (70 * curSelected) + 30;
+		selector.y = (70 * curSelected) + 30;
 
 		var bullShit:Int = 0;
 
@@ -122,12 +119,12 @@ class OptionsMenu extends MusicBeatState
 			bullShit++;
 
 			item.alpha = 0.6;
-			// item.setGraphicSize(Std.int(item.width * 0.8));
+			item.setGraphicSize(Std.int(item.width * 0.8));
 
 			if (item.targetY == 0)
 			{
 				item.alpha = 1;
-				// item.setGraphicSize(Std.int(item.width));
+				item.setGraphicSize(Std.int(item.width));
 			}
 		}
 	}

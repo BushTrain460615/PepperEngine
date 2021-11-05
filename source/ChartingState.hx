@@ -113,7 +113,7 @@ class ChartingState extends MusicBeatState
 		else
 		{
 			_song = {
-				song: 'Test',
+				song: 'Bopeebo',
 				notes: [],
 				bpm: 150,
 				needsVoices: true,
@@ -666,7 +666,9 @@ class ChartingState extends MusicBeatState
 			+ Std.string(FlxMath.roundDecimal(FlxG.sound.music.length / 1000, 2))
 			+ "\nSection: "
 			+ curSection
-			+ "\nCur Step: "
+			+ "\nCurBeat: "
+			+ curBeat
+			+ "\nCurStep: "
 			+ curStep;
 		super.update(elapsed);
 	}
