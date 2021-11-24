@@ -7,14 +7,14 @@ import flixel.FlxSprite;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
+import lime.utils.Assets;
+import flash.text.TextField;
 #if desktop
 import Discord.DiscordClient;
 #end
 
 class OptionsSubState extends MusicBeatSubstate
 {
-	var grpMenuShit:FlxTypedGroup<Alphabet>;
-
 	var textMenuItems:Array<String> = ['Preferences', 'Controls', 'Exit'];
 
 	var selector:FlxSprite;
@@ -91,7 +91,7 @@ class OptionsSubState extends MusicBeatSubstate
 				case "Controls":
 					FlxG.state.closeSubState();
 					FlxG.sound.play(Paths.sound('confirmMenu'));
-					FlxG.switchState(new StoryMenuState());
+					FlxG.switchState(new MainMenuState());
 				case "Exit":
 					FlxG.state.closeSubState();
 					FlxG.sound.play(Paths.sound('cancelMenu'));

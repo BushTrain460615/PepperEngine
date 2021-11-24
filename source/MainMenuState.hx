@@ -6,6 +6,7 @@ import Discord.DiscordClient;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
+import Controls.Control;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.effects.FlxFlicker;
 import flixel.graphics.frames.FlxAtlasFrames;
@@ -136,6 +137,9 @@ class MainMenuState extends MusicBeatState
 				FlxG.switchState(new TitleState());
 			}
 
+			if (FlxG.keys.justPressed.SEVEN)
+				FlxG.switchState(new CharMenu());
+
 			if (controls.ACCEPT)
 			{
 				if (optionShit[curSelected] == 'donate')
@@ -185,6 +189,10 @@ class MainMenuState extends MusicBeatState
 										FlxTransitionableState.skipNextTransIn = true;
 										FlxTransitionableState.skipNextTransOut = true;
 										FlxG.switchState(new OptionsMenu());
+									case 'animation':
+										FlxTransitionableState.skipNextTransIn = true;
+										FlxTransitionableState.skipNextTransOut = true;
+										FlxG.switchState(new CharMenu());
 								}
 							});
 						}

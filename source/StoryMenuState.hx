@@ -167,8 +167,12 @@ class StoryMenuState extends MusicBeatState
 					weekCharacterThing.updateHitbox();
 				case 'pico':
 					weekCharacterThing.flipX = true;
+					weekCharacterThing.updateHitbox();
 				case 'parents-christmas':
 					weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.9));
+					weekCharacterThing.updateHitbox();
+				case 'tankman':
+					weekCharacterThing.y -= 250;
 					weekCharacterThing.updateHitbox();
 			}
 
@@ -192,6 +196,7 @@ class StoryMenuState extends MusicBeatState
 		sprDifficulty.animation.addByPrefix('easy', 'EASY');
 		sprDifficulty.animation.addByPrefix('normal', 'NORMAL');
 		sprDifficulty.animation.addByPrefix('hard', 'HARD');
+		sprDifficulty.animation.addByPrefix('old', 'OLD');
 		sprDifficulty.animation.play('easy');
 		changeDifficulty();
 
@@ -341,6 +346,8 @@ class StoryMenuState extends MusicBeatState
 			curDifficulty = 2;
 		if (curDifficulty > 2)
 			curDifficulty = 0;
+		if (curDifficulty > 3)
+			curDifficulty = -1;
 
 		sprDifficulty.offset.x = 0;
 
@@ -422,6 +429,10 @@ class StoryMenuState extends MusicBeatState
 
 			case 'dad':
 				grpWeekCharacters.members[0].offset.set(120, 200);
+				grpWeekCharacters.members[0].setGraphicSize(Std.int(grpWeekCharacters.members[0].width * 1));
+
+			case 'tankman':
+				grpWeekCharacters.members[0].offset.set(75, -25);
 				grpWeekCharacters.members[0].setGraphicSize(Std.int(grpWeekCharacters.members[0].width * 1));
 
 			default:

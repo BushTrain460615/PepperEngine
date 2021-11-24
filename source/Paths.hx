@@ -30,6 +30,10 @@ class Paths
 			levelPath = getLibraryPathForce(file, "shared");
 			if (OpenFlAssets.exists(levelPath, type))
 				return levelPath;
+
+			levelPath = getLibraryPathForce(file, "shared/characters");
+			if (OpenFlAssets.exists(levelPath, type))
+				return levelPath;
 		}
 
 		return getPreloadPath(file);
@@ -80,6 +84,12 @@ class Paths
 		return sound(key + FlxG.random.int(min, max), library);
 	}
 
+	inline static public function video(key:String, ?library:String)
+	{
+		trace('assets/videos/$key.webm');
+		return getPath('videos/$key.webm', BINARY, library);
+	}
+		
 	inline static public function music(key:String, ?library:String)
 	{
 		return getPath('music/$key.$SOUND_EXT', MUSIC, library);

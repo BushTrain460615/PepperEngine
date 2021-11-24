@@ -3,6 +3,7 @@ dad
 gf
 spooky
 pico
+pico-player
 mom
 mom-car
 bf-car

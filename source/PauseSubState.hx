@@ -1,5 +1,8 @@
 package;
 
+#if desktop
+import Discord.DiscordClient;
+#end
 import Controls.Control;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -153,6 +156,10 @@ class PauseSubState extends MusicBeatSubstate
 			{
 				item.alpha = 1;
 				// item.setGraphicSize(Std.int(item.width));
+
+				#if desktop
+				DiscordClient.changePresence("Paused", null);
+				#end
 			}
 		}
 	}

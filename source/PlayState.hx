@@ -197,6 +197,8 @@ class PlayState extends MusicBeatState
 				storyDifficultyText = "Normal";
 			case 2:
 				storyDifficultyText = "Hard";
+			case 2:
+				storyDifficultyText = "Old";
 		}
 
 		iconRPC = SONG.player2;
@@ -1490,20 +1492,9 @@ class PlayState extends MusicBeatState
 
 		/* if (FlxG.keys.justPressed.NINE)
 			FlxG.switchState(new Charting()); */
-	
-		if (FlxG.keys.justPressed.TWO)
-			FlxG.switchState(new AnimationDebug(SONG.player2));
-		if (controls.BACK)
-			{
-			FlxG.switchState(new MainMenuState());
-			}
 
-		if (FlxG.keys.justPressed.ONE)
-			FlxG.switchState(new AnimationDebug(SONG.player1));	
-		if (controls.BACK)
-			{
-			FlxG.switchState(new MainMenuState());
-			}	
+			if (FlxG.keys.justPressed.EIGHT)
+				FlxG.switchState(new AnimationDebug(SONG.player2));
 
 		if (startingSong)
 		{
@@ -1825,6 +1816,9 @@ class PlayState extends MusicBeatState
 				if (storyDifficulty == 2)
 					difficulty = '-hard';
 
+				if (storyDifficulty == 3)
+					difficulty = '-old';
+
 				trace('LOADING NEXT SONG');
 				trace(PlayState.storyPlaylist[0].toLowerCase() + difficulty);
 
@@ -1876,17 +1870,17 @@ class PlayState extends MusicBeatState
 
 		var daRating:String = "sick";
 
-		if (noteDiff > Conductor.safeZoneOffset * 2.0)
+		if (noteDiff > Conductor.safeZoneOffset * 0.75)
 		{
 			daRating = 'shit';
 			score = 50;
 		}
-		else if (noteDiff > Conductor.safeZoneOffset * 1.9)
+		else if (noteDiff > Conductor.safeZoneOffset * 0.5)
 		{
 			daRating = 'bad';
 			score = 100;
 		}
-		else if (noteDiff > Conductor.safeZoneOffset * 0.5)
+		else if (noteDiff > Conductor.safeZoneOffset * 0.25)
 		{
 			daRating = 'good';
 			score = 200;

@@ -69,6 +69,7 @@
 		<library name="week4"    preload="false" />
 		<library name="week5"    preload="false" />
 		<library name="week6"    preload="false" />
+		<library name="week7"    preload="false" />
 	</section>
 	
 	<assets path="assets/songs"    library="songs"    exclude="*.ogg" if="web"/>
@@ -89,8 +90,8 @@
 	<assets path="assets/week5"    library="week5"    exclude="*.mp3" unless="web"/>
 	<assets path="assets/week6"    library="week6"    exclude="*.ogg" if="web"/>
 	<assets path="assets/week6"    library="week6"    exclude="*.mp3" unless="web"/>
-	<assets path="assets/week7"    library="week6"    exclude="*.ogg" if="web"/>
-	<assets path="assets/week7"    library="week6"    exclude="*.mp3" unless="web"/>
+	<assets path="assets/week7"    library="week7"    exclude="*.ogg" if="web"/>
+	<assets path="assets/week7"    library="week7"    exclude="*.mp3" unless="web"/>
 	
 	<assets path='example_mods' rename='mods' embed='false'/>
 	<assets path='art/readme.txt' rename='do NOT readme.txt' />
@@ -108,6 +109,9 @@
 
 	<haxelib name="flixel" />
 	<haxedev set='webgl' />
+    <haxelib name="actuate" />
+    <haxelib name="extension-webm" if="desktop" />
+
 
 	<!--In case you want to use the addons package-->
 	<haxelib name="flixel-addons" />
