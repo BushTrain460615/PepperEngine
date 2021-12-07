@@ -45,8 +45,8 @@ If not no biggie we don't fully hate you only kinda no biggie.
     INFO AND LINKS
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
 
-If you wanna dig around, the game is fully open source on Github
-https://github.com/ninjamuffin99/Funkin
+If you wanna dig around, the engine is fully open source on Github
+https://github.com/JuniorNovoa1/PepperEngine/releases
 
 It's made in Haxe / HaxeFlixel
 

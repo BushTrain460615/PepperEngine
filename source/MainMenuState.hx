@@ -138,7 +138,7 @@ class MainMenuState extends MusicBeatState
 			}
 
 			if (FlxG.keys.justPressed.SEVEN)
-				FlxG.switchState(new CharMenu());
+				FlxG.sound.play(Paths.sound('OH NO OUR TABLE'));
 
 			if (controls.ACCEPT)
 			{

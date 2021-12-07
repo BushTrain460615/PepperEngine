@@ -222,10 +222,10 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'Monster left note', 24, false);
 
 				addOffset('idle');
-				addOffset("singUP", -20, 50);
-				addOffset("singRIGHT", -33, 10);
-				addOffset("singLEFT", -37, 10);
-				addOffset("singDOWN", -43, -90);
+				addOffset("singUP", -27, 58);
+				addOffset("singRIGHT", -36, 11);
+				addOffset("singLEFT", -51, 9);
+				addOffset("singDOWN", -46, -91);
 				playAnim('idle');
 			case 'pico':
 				tex = Paths.getSparrowAtlas('Pico_FNF_assetss');

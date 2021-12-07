@@ -173,24 +173,24 @@ class Note extends FlxSprite
 
 		if (mustPress)
 		{
-			// ok river
+			// The * 0.5 is so that it's easier to hit them too late, instead of too early
 			if (strumTime > Conductor.songPosition - Conductor.safeZoneOffset
-				&& strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * 0.6))
+			    && strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * 0.5))
 				canBeHit = true;
 			else
 				canBeHit = false;
-
+	
 			if (strumTime < Conductor.songPosition - Conductor.safeZoneOffset && !wasGoodHit)
-				tooLate = true;
+				tooLate = false;
 		}
 		else
 		{
-			canBeHit = false;
-
+		    canBeHit = false;
+	
 			if (strumTime <= Conductor.songPosition)
-				wasGoodHit = true;
+			    wasGoodHit = true;
 		}
-
+	
 		if (tooLate)
 		{
 			if (alpha > 0.3)
@@ -198,3 +198,4 @@ class Note extends FlxSprite
 		}
 	}
 }
+	

@@ -34,7 +34,7 @@ class StoryMenuState extends MusicBeatState
 	];
 	var curDifficulty:Int = 1;
 
-	public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true, true, true];
+	public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true, true, false];
 
 	var weekCharacters:Array<Dynamic> = [
 		['dad', 'bf', 'gf'],
@@ -49,13 +49,13 @@ class StoryMenuState extends MusicBeatState
 
 	var weekNames:Array<String> = [
 		"How To Funk",
-		"Daddy Dearest",
-		"Spooky Month",
-		"PICO",
-		"MOMMY MUST MURDER",
-		"RED SNOW",
-		"hating simulator ft. moawling",
-		"Tankman"
+		"Double D",
+		"Spooky Beats",
+		"Night time Duel",
+		"Limo Showdown",
+		"Chirstmas Fun",
+		"Rhythm Gaming",
+		"Warzone Breakout"
 	];
 
 	var txtWeekTitle:FlxText;
@@ -416,8 +416,8 @@ class StoryMenuState extends MusicBeatState
 		switch (grpWeekCharacters.members[0].animation.curAnim.name)
 		{
 			case 'parents-christmas':
-				grpWeekCharacters.members[0].offset.set(200, 200);
-				grpWeekCharacters.members[0].setGraphicSize(Std.int(grpWeekCharacters.members[0].width * 0.99));
+				grpWeekCharacters.members[0].offset.set(275, 200);
+				grpWeekCharacters.members[0].setGraphicSize(Std.int(grpWeekCharacters.members[0].width * 1.8));
 
 			case 'senpai':
 				grpWeekCharacters.members[0].offset.set(130, 0);
@@ -431,9 +431,21 @@ class StoryMenuState extends MusicBeatState
 				grpWeekCharacters.members[0].offset.set(120, 200);
 				grpWeekCharacters.members[0].setGraphicSize(Std.int(grpWeekCharacters.members[0].width * 1));
 
+		    case 'pico':
+				grpWeekCharacters.members[0].offset.set(145, 100);
+				grpWeekCharacters.members[0].setGraphicSize(Std.int(grpWeekCharacters.members[0].width * 1.5));
+
+			case 'spooky':
+				grpWeekCharacters.members[0].offset.set(175, 125);
+				grpWeekCharacters.members[0].setGraphicSize(Std.int(grpWeekCharacters.members[0].width * 1.5));
+
 			case 'tankman':
 				grpWeekCharacters.members[0].offset.set(75, -25);
 				grpWeekCharacters.members[0].setGraphicSize(Std.int(grpWeekCharacters.members[0].width * 1));
+
+			case 'gf':
+				grpWeekCharacters.members[0].offset.set(100, 100);
+				grpWeekCharacters.members[0].setGraphicSize(Std.int(grpWeekCharacters.members[0].width * 1.5));
 
 			default:
 				grpWeekCharacters.members[0].offset.set(100, 100);

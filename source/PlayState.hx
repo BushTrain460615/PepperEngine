@@ -183,8 +183,6 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('roses/rosesDialogue'));
 			case 'thorns':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('thorns/thornsDialogue'));
-			case 'tutorial':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('tutorial/tutorialDialogue'));
 		}
 
 		#if desktop
@@ -197,8 +195,6 @@ class PlayState extends MusicBeatState
 				storyDifficultyText = "Normal";
 			case 2:
 				storyDifficultyText = "Hard";
-			case 2:
-				storyDifficultyText = "Old";
 		}
 
 		iconRPC = SONG.player2;
@@ -209,7 +205,7 @@ class PlayState extends MusicBeatState
 			case 'senpai-angry':
 				iconRPC = 'senpai';
 			case 'monster-christmas':
-				iconRPC = 'monster';
+				iconRPC = 'monster-christmas';
 			case 'mom-car':
 				iconRPC = 'mom';
 		}
@@ -1866,24 +1862,24 @@ class PlayState extends MusicBeatState
 		//
 
 		var rating:FlxSprite = new FlxSprite();
-		var score:Int = 350;
+		var score:Int = 275;
 
 		var daRating:String = "sick";
 
-		if (noteDiff > Conductor.safeZoneOffset * 0.75)
+		if (noteDiff > Conductor.safeZoneOffset * 2.0)
 		{
 			daRating = 'shit';
-			score = 50;
+			score = 25;
 		}
-		else if (noteDiff > Conductor.safeZoneOffset * 0.5)
+		else if (noteDiff > Conductor.safeZoneOffset * 1.8)
 		{
 			daRating = 'bad';
-			score = 100;
+			score = 50;
 		}
-		else if (noteDiff > Conductor.safeZoneOffset * 0.25)
+		else if (noteDiff > Conductor.safeZoneOffset * 0.6)
 		{
 			daRating = 'good';
-			score = 200;
+			score = 125;
 		}
 
 		songScore += score;
