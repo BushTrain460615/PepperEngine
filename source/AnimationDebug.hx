@@ -31,7 +31,7 @@ class AnimationDebug extends FlxState
 	private var camHUD:FlxCamera;
 	private var camGame:FlxCamera;
 
-	var flippedChars:Array<String> = ["bf", "tankman"];
+	var flippedChars:Array<String> = ["bf", "tankman", "pico"];
 
 	public function new(daAnim:String = 'spooky')
 	{

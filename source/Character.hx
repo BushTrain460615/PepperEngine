@@ -233,57 +233,46 @@ class Character extends FlxSprite
 				animation.addByPrefix('idle', "Pico Idle Dance", 24);
 				animation.addByPrefix('singUP', 'pico Up note0', 24, false);
 				animation.addByPrefix('singDOWN', 'Pico Down Note0', 24, false);
-				animation.addByPrefix('singLEFT', 'Pico NOTE LEFT0', 24, false);
-				animation.addByPrefix('singRIGHT', 'Pico Note Right0', 24, false);
+				animation.addByPrefix('singRIGHT', 'Pico NOTE LEFT0', 24, false);
+				animation.addByPrefix('singLEFT', 'Pico Note Right0', 24, false);
 
 				addOffset('idle');
 				addOffset("singUP", -38, 30);
-				addOffset("singRIGHT", -81, -11);
-				addOffset("singLEFT", 51, 2);
+				addOffset("singRIGHT", -81, -10);
+				addOffset("singLEFT", 53, 0);
 				addOffset("singDOWN", 189, -80);
-				addOffset("singUPmiss", -16, 66);
-				addOffset("singRIGHTmiss", -61, 30);
-				addOffset("singLEFTmiss", 68, 58);
-				addOffset("singDOWNmiss", 201, -27);
 
 			    playAnim('idle');
 
 			    flipX = true;
 
 			case 'pico-player':
-				var tex = Paths.getSparrowAtlas('characters/pico');
+				var tex = Paths.getSparrowAtlas('characters/pico_player');
 				frames = tex;
 				animation.addByPrefix('idle', "Pico Idle Dance", 24);
 				animation.addByPrefix('singUP', 'pico Up note0', 24, false);
 				animation.addByPrefix('singDOWN', 'Pico Down Note0', 24, false);
-				animation.addByPrefix('singLEFT', 'Pico NOTE LEFT0', 24, false);
-				animation.addByPrefix('singRIGHT', 'Pico Note Right0', 24, false);
+				animation.addByPrefix('singLEFT', 'Pico Note Right0', 24, false);
+				animation.addByPrefix('singRIGHT', 'Pico NOTE LEFT0', 24, false);
 				animation.addByPrefix('singRIGHTmiss', 'Pico Note Right Miss', 24, false);
 				animation.addByPrefix('singLEFTmiss', 'Pico NOTE LEFT miss', 24, false);
 				animation.addByPrefix('singUPmiss', 'pico Up note miss', 24);
 				animation.addByPrefix('singDOWNmiss', 'Pico Down Note MISS', 24);
-
-				animation.addByPrefix('firstDeath', "BF dies", 24, false);
-				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
-				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
 	
 				addOffset('idle');
-				addOffset("singUP", -38, 30);
-				addOffset("singRIGHT", -81, -11);
-				addOffset("singLEFT", 51, 2);
-				addOffset("singDOWN", 189, -80);
-				addOffset("singUPmiss", -16, 66);
-				addOffset("singRIGHTmiss", -61, 30);
-				addOffset("singLEFTmiss", 68, 58);
-				addOffset("singDOWNmiss", 201, -27);
-				addOffset('firstDeath', 36, 5);
-				addOffset('deathLoop', 26, 0);
-				addOffset('deathConfirm', 26, 63);
+				addOffset("singUP", 10, 30);
+				addOffset("singRIGHT", -49, 4);
+				addOffset("singLEFT", 79, -12);
+				addOffset("singDOWN", 96, -80);
+				addOffset("singUPmiss", 14, 58);
+				addOffset("singRIGHTmiss", 89, 36);
+				addOffset("singLEFTmiss", -51, 43);
+				addOffset("singDOWNmiss", 91, -37);
 	
 				playAnim('idle');
 	
 				flipX = true;
-
+				
 			case 'bf':
 				var tex = Paths.getSparrowAtlas('BOYFRIEND');
 				frames = tex;
@@ -351,43 +340,6 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 				flipX = true;
-
-			#if debug
-			case 'picoplayer':
-				var tex = Paths.getSparrowAtlas('characters/pico');
-				frames = tex;
-				animation.addByPrefix('idle', 'Pico Idle Dance', 24, false);
-				animation.addByPrefix('singUP', 'pico Up note0', 24, false);
-				animation.addByPrefix('singLEFT', 'Pico NOTE LEFT0', 24, false);
-				animation.addByPrefix('singRIGHT', 'Pico Note Right0', 24, false);
-				animation.addByPrefix('singDOWN', 'Pico Down Note0', 24, false);
-				animation.addByPrefix('singUPmiss', 'pico Up note miss', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'Pico NOTE LEFT miss', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'Pico Note Right Miss', 24, false);
-				animation.addByPrefix('singDOWNmiss', 'Pico Down Note MISS', 24, false);
-	
-				animation.addByPrefix('firstDeath', "BF dies", 24, false);
-				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
-				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
-	
-				addOffset('idle', -5);
-				addOffset("singUP", -47, 27);
-				addOffset("singRIGHT", -46, -6);
-				addOffset("singLEFT", 2, -7);
-				addOffset("singDOWN", -10, -53);
-				addOffset("singUPmiss", -25, 25);
-				addOffset("singRIGHTmiss", -32, 20);
-				addOffset("singLEFTmiss", 12, 18);
-				addOffset("singDOWNmiss", -11, -19);
-				addOffset('firstDeath', 36, 5);
-				addOffset('deathLoop', 26, 0);
-				addOffset('deathConfirm', 26, 63);
-	
-				playAnim('idle');
-	
-				flipX = true;
-	        #end
-			
 			case 'bf-car':
 				var tex = Paths.getSparrowAtlas('bfCar');
 				frames = tex;
