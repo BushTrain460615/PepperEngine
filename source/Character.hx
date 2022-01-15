@@ -247,15 +247,15 @@ class Character extends FlxSprite
 			    flipX = true;
 
 			case 'pico-player':
-				var tex = Paths.getSparrowAtlas('characters/pico_player');
+				var tex = Paths.getSparrowAtlas('Pico_FNF_assetss');
 				frames = tex;
 				animation.addByPrefix('idle', "Pico Idle Dance", 24);
 				animation.addByPrefix('singUP', 'pico Up note0', 24, false);
 				animation.addByPrefix('singDOWN', 'Pico Down Note0', 24, false);
 				animation.addByPrefix('singLEFT', 'Pico Note Right0', 24, false);
 				animation.addByPrefix('singRIGHT', 'Pico NOTE LEFT0', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'Pico Note Right Miss', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'Pico NOTE LEFT miss', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'Pico NOTE LEFT miss', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'Pico Note Right Miss', 24, false);
 				animation.addByPrefix('singUPmiss', 'pico Up note miss', 24);
 				animation.addByPrefix('singDOWNmiss', 'Pico Down Note MISS', 24);
 	
@@ -265,8 +265,8 @@ class Character extends FlxSprite
 				addOffset("singLEFT", 79, -12);
 				addOffset("singDOWN", 96, -80);
 				addOffset("singUPmiss", 14, 58);
-				addOffset("singRIGHTmiss", 89, 36);
-				addOffset("singLEFTmiss", -51, 43);
+				addOffset("singRIGHTmiss", -50, 39);
+				addOffset("singLEFTmiss", 83, 33);
 				addOffset("singDOWNmiss", 91, -37);
 	
 				playAnim('idle');

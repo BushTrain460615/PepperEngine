@@ -29,7 +29,7 @@ class OutdatedSubState extends MusicBeatState
 			"HEY! You're running an outdated version of PepperEngine!\nCurrent version is "
 			+ ver
 			+ " while the most recent version is "
-			+ NGio.GAME_VER
+			+ ver
 			+ "! Press Space to go to Github, or ESCAPE to ignore this!!",
 			32);
 		txt.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);

@@ -200,14 +200,12 @@ class PlayState extends MusicBeatState
 		iconRPC = SONG.player2;
 
 		// To avoid having duplicate images in Discord assets
-		switch (iconRPC)
+	    switch (iconRPC)
 		{
-			case 'senpai-angry':
-				iconRPC = 'senpai';
-			case 'monster-christmas':
-				iconRPC = 'monster-christmas';
-			case 'mom-car':
-				iconRPC = 'mom';
+			case 'bf-car':
+				iconRPC = 'bf';
+			case 'pico-player':
+				iconRPC = 'pico';
 		}
 
 		// String that contains the mode defined here so it isn't necessary to call changePresence for each mode
@@ -671,6 +669,10 @@ class PlayState extends MusicBeatState
 			case 'pico':
 				camPos.x += 600;
 				dad.y += 300;
+				dad.x += 100;
+			case 'pico-player':
+				camPos.x += -200;
+				dad.y += 400;
 			case 'parents-christmas':
 				dad.x -= 500;
 			case 'senpai':
@@ -687,7 +689,7 @@ class PlayState extends MusicBeatState
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'tankman':
 				dad.y += 315;
-				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
+				camPos.x -= 600;
 		}
 
 		boyfriend = new Boyfriend(770, 450, SONG.player1);
