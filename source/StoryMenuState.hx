@@ -34,7 +34,7 @@ class StoryMenuState extends MusicBeatState
 	];
 	var curDifficulty:Int = 1;
 
-	public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true, false];
+	public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true, true, true];
 
 	var weekCharacters:Array<Dynamic> = [
 		['dad', 'bf', 'gf'],
@@ -334,7 +334,14 @@ class StoryMenuState extends MusicBeatState
 			PlayState.campaignScore = 0;
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
-				LoadingState.loadAndSwitchState(new PlayState(), true);
+				if (curWeek == 7)
+				{
+					LoadingState.loadAndSwitchState(new VideoState("assets/videos/ugh.webm", new PlayState()));
+				}
+				else
+				{
+					LoadingState.loadAndSwitchState(new PlayState(), true);
+				}
 			});
 		}
 	}
