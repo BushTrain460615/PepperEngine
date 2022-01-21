@@ -46,7 +46,7 @@ class TitleState extends MusicBeatState
 
 	override public function create():Void
 	{
-
+          
 		PlayerSettings.init();
 
 		curWacky = FlxG.random.getObject(getIntroTextShit());
@@ -57,8 +57,10 @@ class TitleState extends MusicBeatState
 
 		FlxG.save.bind('funkin', 'ninjamuffin99');
 
-		Highscore.load();
-
+		Highscore.load(); 
+		
+                FlxG.mouse.visible = false; 
+		
 		if (FlxG.save.data.weekUnlocked != null)
 		{
 			// FIX LATER!!!
