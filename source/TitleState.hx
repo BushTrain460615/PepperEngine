@@ -1,8 +1,9 @@
 package;
 
 #if desktop
-import Discord.DiscordClient;
-import sys.thread.Thread;
+import Discord.DiscordClient; 
+#if sys
+import sys.thread.Thread; 
 #end
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -72,7 +73,7 @@ class TitleState extends MusicBeatState
 
 			// QUICK PATCH OOPS!
 			if (!StoryMenuState.weekUnlocked[0])
-				StoryMenuState.weekUnlocked[0] = true;
+			StoryMenuState.weekUnlocked[0] = true;
 		}
 
 		#if FREEPLAY
