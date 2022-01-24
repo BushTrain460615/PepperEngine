@@ -1,6 +1,6 @@
 //do not use this unstable shit
 /*
-package;
+package function;
 
 import flixel.FlxState;
 import flixel.FlxG;
