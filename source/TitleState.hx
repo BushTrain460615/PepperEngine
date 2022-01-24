@@ -1,7 +1,8 @@
 package;
 
 #if desktop
-import Discord.DiscordClient; 
+import Discord.DiscordClient;  
+#end
 #if sys
 import sys.thread.Thread; 
 #end
