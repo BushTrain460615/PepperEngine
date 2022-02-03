@@ -122,10 +122,6 @@
 	<haxelib name="newgrounds"/>
 	<haxelib name="faxe" if='switch'/>
 	<haxelib name="discord_rpc" if="desktop"/> 
-	<haxelib name="crashdumper"/>
-	<!--if you want hxcpp stack line-->
-         <haxedef name="HXCPP_STACK_LINE" />  <!--if you want line numbers-->
-        <haxedef name="HXCPP_STACK_TRACE"/>  <!--if you want stack traces-->
 	<!--Disable the Flixel core focus lost screen-->
 	<haxedef name="FLX_NO_FOCUS_LOST_SCREEN" />
 
